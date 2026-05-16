@@ -4,7 +4,7 @@ import pickle
 import os
 
 # *** สำคัญมาก: ต้อง Import คลาสโครงสร้างของโมเดลเพื่อให้ Pickle รู้จักตอนโหลดไฟล์ ***
-from rf_fault_detect import ScratchRandomForest, ScratchDecisionTree, Node
+from rf_fault_train import ScratchRandomForest, ScratchDecisionTree, Node
 
 def implement_model(model_filename):
     """ฟังก์ชันนี้จำลองการรันโปรแกรมใหม่ที่หน้างาน โดยดึงจากไฟล์ที่เซฟไว้"""
