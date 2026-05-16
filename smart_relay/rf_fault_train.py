@@ -235,11 +235,11 @@ class ModelTrainer:
             if directory is None:
                 curr_dir = os.path.dirname(os.path.abspath(__file__))
                 file_name = os.path.join(curr_dir, 'relay_fault_dataset.csv')
-                df = pd.read_xlsx(file_name)
-                print("✅ โหลดไฟล์ CSV สำเร็จ")
+                 df = pd.read_excel(file_name)
+                print("✅ โหลดไฟล์ Excel สำเร็จ")
             else:
                 file_name = directory
-                df = pd.read_xlsx(file_name)
+                df = pd.read_excel(file_name)
                 print("✅ โหลดไฟล์ Excel สำเร็จ")
         except FileNotFoundError:
             # ระบบ Fallback: ถ้าลืมใส่ไฟล์ Excel มันจะสร้างข้อมูลสุ่มขึ้นมาให้รันผ่านไปก่อนได้
