@@ -247,11 +247,11 @@ if __name__ == "__main__":
     # 1. โหลดและจัดการข้อมูล
     try:
         curr_dir = os.path.dirname(os.path.abspath(__file__))
-        file_name = os.path.join(curr_dir, 'relay_fault_dataset.csv')
-        df = pd.read_csv(file_name)
-        print("✅ โหลดไฟล์ CSV สำเร็จ")
+        file_name = os.path.join(curr_dir, 'relay_fault_dataset.xlsx')
+        df = pd.read_excel(file_name)
+        print("✅ โหลดไฟล์ Excel สำเร็จ")
     except FileNotFoundError:
-        print("⚠️ ไม่พบไฟล์ CSV กำลังสร้างข้อมูลจำลอง (Synthetic Data) เพื่อการทดสอบ...")
+        print("⚠️ ไม่พบไฟล์ Excel กำลังสร้างข้อมูลจำลอง (Synthetic Data) เพื่อการทดสอบ...")
         df = pd.DataFrame({
             'I_a': np.random.uniform(10, 100, 500), 'V_a': np.random.uniform(200, 240, 500),
             'I_b': np.random.uniform(10, 100, 500), 'V_b': np.random.uniform(200, 240, 500),
